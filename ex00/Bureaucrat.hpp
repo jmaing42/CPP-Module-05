@@ -9,7 +9,7 @@ class Bureaucrat {
 private:
   static void ensureValidGrade(int grade);
 
-  std::string name;
+  const std::string name;
   int grade;
 
   void setGrade(int grade);
@@ -28,6 +28,7 @@ public:
   class GradeRangeException : public std::exception {};
   class GradeTooHighException : public GradeRangeException {};
   class GradeTooLowException : public GradeRangeException {};
+  class InvalidCopyException : public std::exception {};
 };
 
 std::ostream &operator<<(std::ostream &os, const Bureaucrat &bureaucrat);

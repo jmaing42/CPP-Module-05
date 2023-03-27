@@ -9,9 +9,8 @@ Bureaucrat::~Bureaucrat() {}
 Bureaucrat::Bureaucrat(const Bureaucrat &copy)
     : name(copy.name), grade(copy.grade) {}
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &copy) {
-  this->name = copy.name;
-  this->setGrade(copy.grade);
-  return *this;
+  (void)copy;
+  throw Bureaucrat::InvalidCopyException();
 }
 
 void Bureaucrat::ensureValidGrade(int grade) {
