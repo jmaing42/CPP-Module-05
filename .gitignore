@@ -8,3 +8,11 @@ ex00/*
 !ex00/main.cpp
 !ex00/Bureaucrat.hpp
 !ex00/Bureaucrat.cpp
+
+ex01/*
+!ex01/Makefile
+!ex01/main.cpp
+!ex01/Bureaucrat.hpp
+!ex01/Bureaucrat.cpp
+!ex01/Form.hpp
+!ex01/Form.cpp
