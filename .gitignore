@@ -1,0 +1,10 @@
+.cache
+compile_commands.json
+.vscode/*
+!.vscode/settings.json
+
+ex00/*
+!ex00/Makefile
+!ex00/main.cpp
+!ex00/Bureaucrat.hpp
+!ex00/Bureaucrat.cpp
