@@ -1,4 +1,4 @@
-NAME = ex00
+NAME = ex01
 OBJS = main.o Bureaucrat.o Form.o
 
 CXXFLAGS = -Wall -Wextra -Werror

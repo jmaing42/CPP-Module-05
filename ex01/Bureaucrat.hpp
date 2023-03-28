@@ -5,6 +5,8 @@
 #include <ostream>
 #include <string>
 
+class Form;
+
 class Bureaucrat {
 private:
   static void ensureValidGrade(int grade);
@@ -24,6 +26,7 @@ public:
   int getGrade() const;
   void increaseGrade();
   void decreaseGrade();
+  void signForm(Form *form) const;
 
   class GradeRangeException : public std::exception {};
   class GradeTooHighException : public GradeRangeException {};

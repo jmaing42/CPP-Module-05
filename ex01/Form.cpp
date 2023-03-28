@@ -1,6 +1,7 @@
-#include "Form.hpp"
-
 #include <ostream>
+
+#include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 void Form::ensureValidGrade(int grade) {
   if (grade < 1)
@@ -33,7 +34,7 @@ int Form::getRequiredGradeToExecute() const {
   return this->requiredGradeToExecute;
 }
 
-void Form::beSigned(Bureaucrat bureaucrat) {
+void Form::beSigned(const Bureaucrat &bureaucrat) {
   if (this->isSigned)
     throw Form::AlreadySignedException();
   if (bureaucrat.getGrade() > this->requiredGradeToSign)

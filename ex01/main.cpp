@@ -1,32 +1,19 @@
 #include <iostream>
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int main() {
   {
-    Bureaucrat bureaucrat;
-    std::cout << bureaucrat << std::endl;
+    Form form;
+    std::cout << form << std::endl;
     try {
-      while (true) {
-        bureaucrat.increaseGrade();
+      for (Bureaucrat bureaucrat("B", 150);; bureaucrat.increaseGrade()) {
         std::cout << bureaucrat << std::endl;
+        bureaucrat.signForm(&form);
       }
     } catch (std::exception &e) {
       std::cerr << e.what() << std::endl;
     }
-    std::cout << bureaucrat << std::endl;
-  }
-  {
-    Bureaucrat bureaucrat;
-    std::cout << bureaucrat << std::endl;
-    try {
-      while (true) {
-        bureaucrat.decreaseGrade();
-        std::cout << bureaucrat << std::endl;
-      }
-    } catch (std::exception &e) {
-      std::cerr << e.what() << std::endl;
-    }
-    std::cout << bureaucrat << std::endl;
   }
 }

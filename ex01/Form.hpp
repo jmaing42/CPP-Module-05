@@ -1,10 +1,11 @@
 #ifndef EX01_FORM_HPP_INCLUDED
 #define EX01_FORM_HPP_INCLUDED
 
-#include "Bureaucrat.hpp"
 #include <exception>
 #include <ostream>
 #include <string>
+
+class Bureaucrat;
 
 class Form {
 private:
@@ -27,7 +28,7 @@ public:
   int getRequiredGradeToSign() const;
   int getRequiredGradeToExecute() const;
 
-  void beSigned(Bureaucrat bureaucrat);
+  void beSigned(const Bureaucrat &bureaucrat);
 
   class GradeRangeException : public std::exception {};
   class GradeTooHighException : public GradeRangeException {};
