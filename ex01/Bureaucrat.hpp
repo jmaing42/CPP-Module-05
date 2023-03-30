@@ -26,7 +26,7 @@ public:
   int getGrade() const;
   void increaseGrade();
   void decreaseGrade();
-  void signForm(Form *form) const;
+  void signForm(Form &form) const;
 
   class GradeRangeException : public std::exception {};
   class GradeTooHighException : public GradeRangeException {};

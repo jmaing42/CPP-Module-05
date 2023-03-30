@@ -10,7 +10,7 @@ int main() {
     try {
       for (Bureaucrat bureaucrat("B", 150);; bureaucrat.increaseGrade()) {
         std::cout << bureaucrat << std::endl;
-        bureaucrat.signForm(&form);
+        bureaucrat.signForm(form);
       }
     } catch (std::exception &e) {
       std::cerr << e.what() << std::endl;

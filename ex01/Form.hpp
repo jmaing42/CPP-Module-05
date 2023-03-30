@@ -33,8 +33,9 @@ public:
   class GradeRangeException : public std::exception {};
   class GradeTooHighException : public GradeRangeException {};
   class GradeTooLowException : public GradeRangeException {};
-  class InvalidCopyException : public std::exception {};
-  class AlreadySignedException : public std::exception {};
+  class InvalidOperationException : public std::exception {};
+  class InvalidCopyException : public InvalidOperationException {};
+  class AlreadySignedException : public InvalidOperationException {};
 };
 
 std::ostream &operator<<(std::ostream &os, const Form &Form);
