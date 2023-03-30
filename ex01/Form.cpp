@@ -1,7 +1,8 @@
+#include "Form.hpp"
+
 #include <ostream>
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
 
 void Form::ensureValidGrade(int grade) {
   if (grade < 1)
