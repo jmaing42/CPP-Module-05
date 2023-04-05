@@ -17,7 +17,8 @@ int main() {
     AForm *rrf;
     try {
       rrf = someRandomIntern.makeForm("go home", "jmaing");
-    } catch (std::exception &e) {
+      delete rrf;
+    } catch (const std::exception &e) {
       std::cout << "Error making form: " << e.what() << std::endl;
     }
   }

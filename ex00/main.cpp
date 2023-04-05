@@ -11,7 +11,7 @@ int main() {
         bureaucrat.increaseGrade();
         std::cout << bureaucrat << std::endl;
       }
-    } catch (std::exception &e) {
+    } catch (const std::exception &e) {
       std::cerr << e.what() << std::endl;
     }
     std::cout << bureaucrat << std::endl;
@@ -24,7 +24,7 @@ int main() {
         bureaucrat.decreaseGrade();
         std::cout << bureaucrat << std::endl;
       }
-    } catch (std::exception &e) {
+    } catch (const std::exception &e) {
       std::cerr << e.what() << std::endl;
     }
     std::cout << bureaucrat << std::endl;
