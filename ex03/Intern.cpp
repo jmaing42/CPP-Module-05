@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <cstddef>
 #include <iostream>
 #include <sys/_types/_size_t.h>
 
@@ -49,7 +50,7 @@ const Entry typeInfo[] = {
 };
 
 AForm *Intern::makeForm(std::string type, std::string target) {
-  AForm *(*factory)(std::string target) = nullptr;
+  AForm *(*factory)(std::string target) = NULL;
   for (size_t i = 0; i < sizeof(typeInfo) / sizeof(typeInfo[0]); i++)
     if (typeInfo[i].typeName == type)
       factory = typeInfo[i].factory;
