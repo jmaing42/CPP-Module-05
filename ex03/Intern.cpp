@@ -12,7 +12,6 @@
 
 #include <cstddef>
 #include <iostream>
-#include <sys/_types/_size_t.h>
 
 #include "AForm.hpp"
 #include "Intern.hpp"
